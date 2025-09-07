@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julgamento de Osíris</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom, #1a1a1a, #333);
+            color: #f8f8f2;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: gold;
+            text-shadow: 2px 2px 5px black;
+        }
+        img {
+            width: 400px;
+            margin: 20px auto;
+            border: 4px solid gold;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+        }
+        input {
+            width: 250px;
+        }
+        button {
+            background: gold;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: darkgoldenrod;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Julgamento de Osíris</h1>
+    <p>
+        De tempos em tempos, os dignos de estudos e espiritualidade são convocados para ter sua alma
+        provada no JULGAMENTO DE OSÍRIS. O deus pesa seu coração contra uma pena. Digite abaixo e veja se você também consegue
+        ter o direito à vida pós-morte:
+    </p>
+    <img id="imagem" src="img/Julgamento1.png" alt="Julgamento">
+    <br>
+    <input type="text" id="resultado" placeholder="Digite algo...">
+    <button id="botao">Clique para saber a resposta!</button>
+
+    <script>
+        var botaoR = document.getElementById("botao");
+        var inputer = document.getElementById("resultado");
+        var imagem = document.getElementById("imagem");
+        botaoR.addEventListener('click', function() {
+            var palavras = inputer.value.trim();
+            var tamanho = palavras.length;
+            if (tamanho % 2 === 0) {
+                imagem.src = "img/Julgamento2.png";
+                alert("Infelizmente sua alma foi condenada...")
+            } else {
+                imagem.src = "img/Julgamento3.png";
+                alert("Parabéns, você foi selecionado para a vida pós-morte!")
+            }
+        });
+    </script>
+</body>
+</html>

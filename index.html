@@ -53,7 +53,7 @@
         provada no JULGAMENTO DE OSÍRIS. O deus pesa seu coração contra uma pena. Digite abaixo e veja se você também consegue
         ter o direito à vida pós-morte:
     </p>
-    <img id="imagem" src="img/Julgamento1.png" alt="Julgamento">
+    <img id="imagem" src="/img/Julgamento1.png" alt="Julgamento">
     <br>
     <input type="text" id="resultado" placeholder="Digite algo...">
     <button id="botao">Clique para saber a resposta!</button>
@@ -66,13 +66,14 @@
             var palavras = inputer.value.trim();
             var tamanho = palavras.length;
             if (tamanho % 2 === 0) {
-                imagem.src = "img/Julgamento2.png";
+                imagem.src = "/img/Julgamento2.png";
                 alert("Infelizmente sua alma foi condenada...")
             } else {
-                imagem.src = "img/Julgamento3.png";
+                imagem.src = "/img/Julgamento3.png";
                 alert("Parabéns, você foi selecionado para a vida pós-morte!")
             }
         });
     </script>
 </body>
 </html>
+
